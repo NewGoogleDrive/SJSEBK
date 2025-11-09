@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SqueakJS Embed Kit – easily embed early Scratch/Squeak images into any webpage." />
+  <title>SqueakJS Embed Kit v1.0</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a0f2c 0%, #001a33 100%);
+      color: #e5e7eb;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    a {
+      color: #93c5fd;
+    }
+    a:hover {
+      color: #bfdbfe;
+    }
+    iframe {
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+  <header class="glass py-6 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6">
+      <h1 class="text-2xl font-bold tracking-tight text-white">SqueakJS <span class="text-blue-300">Embed Kit</span></h1>
+      <nav class="space-x-4">
+        <a href="https://github.com/NewGoogleDrive/SqueakJS-embed-kit" class="hover:text-blue-100 transition">GitHub</a>
+        <a href="docs.html" class="hover:text-blue-100 transition">Documentation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="max-w-5xl mx-auto text-center py-20 px-6">
+      <div class="glass p-10 rounded-3xl shadow-2xl">
+        <h2 class="text-5xl font-extrabold mb-4 text-white">Embed SqueakJS Anywhere</h2>
+        <p class="text-gray-300 mb-8 text-lg max-w-2xl mx-auto">Run Squeak or early Scratch images right inside your site – no setup needed, just drop and go.</p>
+        <a href="https://github.com/NewGoogleDrive/SqueakJS-embed-kit/releases/download/v1.0/SqueakJS-embed-kit-main.zip" class="bg-blue-500 hover:bg-blue-400 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition transform hover:scale-105">Download v1.0</a>
+      </div>
+    </section>
+
+    <!-- Live Demo -->
+    <section class="max-w-5xl mx-auto text-center py-12 px-6">
+      <h3 class="text-3xl font-semibold mb-6 text-white">Live Demo</h3>
+      <div class="glass p-4 rounded-2xl shadow-2xl">
+        <iframe src="https://newgoogledrive.github.io/SqueakJS-embed-kit/squeakjs/run/index.html#image=../images/example.image" class="w-full h-[70vh] md:h-[600px]" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p class="text-sm text-gray-400 mt-4">If the demo doesn’t load, <a href="https://newgoogledrive.github.io/SqueakJS-embed-kit/squeakjs/run/index.html#image=../images/example.image" target="_blank" rel="noopener" class="underline">open it in a new tab</a>.</p>
+    </section>
+
+    <!-- Usage Section -->
+    <section class="max-w-4xl mx-auto py-16 px-6 text-gray-200">
+      <h3 class="text-3xl font-semibold mb-6 text-center text-white">How to Use</h3>
+      <div class="glass p-8 rounded-2xl">
+        <ol class="list-decimal list-inside space-y-3 text-left">
+          <li>Upload the <code class="bg-blue-900 px-1 rounded text-blue-200">squeakjs/</code> folder to your site or GitHub Pages.</li>
+          <li>Place your <code class="text-blue-200">.image</code> file inside the <code class="text-blue-200">images/</code> folder.</li>
+          <li>Embed it anywhere with this snippet:</li>
+        </ol>
+        <pre class="bg-blue-900 text-blue-100 rounded-lg mt-4 p-4 text-sm overflow-x-auto"><code>&lt;iframe src="squeakjs/run/index.html#image=../images/YourImage.image" width="800" height="600" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+        <p class="mt-4 text-sm text-gray-400">Use relative or absolute paths and adjust the size freely.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Documentation Page Link -->
+  <section class="max-w-5xl mx-auto text-center py-12 px-6">
+    <div class="glass p-6 rounded-2xl">
+      <h3 class="text-2xl font-semibold text-white mb-3">Need Help?</h3>
+      <p class="text-gray-300 mb-4">Learn more about embedding options, customization, and troubleshooting in the documentation.</p>
+      <a href="https://newgoogledrive.github.io/SqueakJS-embed-kit/" class="bg-blue-500 hover:bg-blue-400 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition transform hover:scale-105">View Documentation</a>
+    </div>
+  </section>
+
+  <footer class="glass py-6 mt-12">
+    <div class="max-w-6xl mx-auto text-center text-gray-400 text-sm">
+      <p>SqueakJS Embed Kit v1.0 – Made by STebBerry/NewGoogleDrive</p>
+      <p class="mt-1"><a href="https://newgoogledrive.github.io/SJSEBK/" class="text-blue-300 hover:text-blue-100">Visit Legacy Project Page</a></p>
+    </div>
+  </footer>
+</body>
+</html>
+
